@@ -19,6 +19,32 @@ components:
         name: fake name
         role: user
 
+    Questionnaire:
+      type: object
+      properties:
+        id:
+          type: string
+        patientId:
+          type: string
+        submittingDate:
+          type: string
+        answers:
+          type: string
+        type:
+          type: string
+          enum: [basic]
+        score:
+          type: number
+        wasDisplayedByDoctor:
+          type: boolean
+      example:
+        id: 5ebac534954b54139806c112
+        patientId: 5ebac534954b54139806c112
+        submittingDate: 2023-01-01 23:59:59
+        type: basic
+        score: 100
+        wasDisplayedByDoctor: true
+
     Token:
       type: object
       properties:
