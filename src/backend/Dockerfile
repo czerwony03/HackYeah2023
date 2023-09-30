@@ -12,6 +12,4 @@ RUN npm install --pure-lockfile
 
 COPY --chown=node:node . .
 
-CMD [ "npm", "start" ]
-
 EXPOSE 3000
