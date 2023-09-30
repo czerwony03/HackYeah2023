@@ -60,12 +60,15 @@ module.exports = router;
  *                 description: At least one number and one letter
  *               role:
  *                  type: string
- *                  enum: [user, admin]
+ *                  enum: [user, doctor, receptionist, admin]
+ *               doctorId:
+ *                 type: string
  *             example:
  *               name: fake name
  *               email: fake@example.com
  *               password: password1
  *               role: user
+ *               doctorId: 12dssgj456y3grg
  *     responses:
  *       "201":
  *         description: Created

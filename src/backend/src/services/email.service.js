@@ -55,9 +55,17 @@ If you did not create an account, then ignore this email.`;
   await sendEmail(to, subject, text);
 };
 
+const sendQuestionnaireCreatedEmail = async (to, authorUser) => {
+  const subject = 'Questionnaire response';
+  const text = `Dear doctor,
+There is new questionnaire from ${ authorUser.name }`;
+  await sendEmail(to, subject, text);
+};
+
 module.exports = {
   transport,
   sendEmail,
   sendResetPasswordEmail,
   sendVerificationEmail,
+  sendQuestionnaireCreatedEmail,
 };
