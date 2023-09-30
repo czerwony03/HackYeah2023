@@ -1,0 +1,19 @@
+
+<div class="card m-auto">
+  <div class="card-body">
+    <h1 class="text-center">OncoApp</h1>
+    <form class="row g-3" [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmit()">
+      <div class="col-12">
+        <label class="form-label" for="login-email">Email</label>
+        <input id="login-email" class="form-control" type="email" formControlName="email">
+      </div>
+      <div class="col-12">
+        <label class="form-label" for="login-password">Password</label>
+        <input id="login-password" class="form-control" type="password" formControlName="password">
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
