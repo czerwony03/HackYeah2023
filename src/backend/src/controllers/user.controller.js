@@ -3,9 +3,13 @@ const pick = require('../utils/pick');
 const ApiError = require('../utils/ApiError');
 const catchAsync = require('../utils/catchAsync');
 const { userService } = require('../services');
+const { permissionCheck } = require('../utils/permission');
 
 const createUser = catchAsync(async (req, res) => {
   const user = await userService.createUser(req.body);
+  if (!permissionCheck(req, 'manageSpecialRoles')) {
+    req.body.role = 'user';
+  }
   res.status(httpStatus.CREATED).send(user);
 });
 
